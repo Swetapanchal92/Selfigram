@@ -23,11 +23,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate{
         let loginButton = FBSDKLoginButton()
         loginButton.frame = CGRect(x: 80, y: 450, width: 100, height: 28)
         view.addSubview(loginButton)
-        let horizontalConstraint = NSLayoutConstraint(item: loginButton, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
-        let verticalConstraint = NSLayoutConstraint(item: loginButton, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
-        let widthConstraint = NSLayoutConstraint(item: loginButton, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 100)
-        let heightConstraint = NSLayoutConstraint(item: loginButton, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 100)
-        view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
         loginButton.readPermissions = ["email","public_profile"]
         loginButton.delegate = self
 
