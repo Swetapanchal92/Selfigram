@@ -46,9 +46,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate{
                // showEmailAddress()
                 if (FBSDKAccessToken.current() != nil)
                 {
-                    view.willRemoveSubview(loginButton)
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FeedViewController")
-                    self.present(viewController, animated: true, completion: nil)
+                    //view.willRemoveSubview(loginButton)
+                    self.nextViewController()
                 }
                 
             }
@@ -83,45 +82,36 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate{
         let pwd = passwordTextField.text
         
         if(uname!.isEmpty || pwd!.isEmpty){
-            displayMyAlertMessage(userMsg: "All fields are required...!!!!")
-        return;
+            displayMyAlertMessage(title: "Alert", userMsg: "All fields are required...!!!!")
+            return;
         }
         else
         {
-            PFUser.logInWithUsername(inBackground: uname!, password: pwd!, block: { (user, error) -> Void in
-                
-                // Stop the spinner
-                
+            PFUser.logInWithUsername(inBackground: uname!, password: pwd!, block: { (user,      error) -> Void in
                 if ((user) != nil) {
-                    let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
                     self.nextViewController()
-                   
-                    
-                } else {
-                    let alert = UIAlertView(title: "Error", message: " Username and Password is wrong.... Please re-enter correct Username & Password...!!!", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
+                }
+                else {
+                    self.displayMyAlertMessage(title: "Error", userMsg: "Username and Password is wrong.... Please enter correct Username & Password...!!!")
                 }
             })
-                    
-   
         }
         
         
 
     }
     
-    func nextViewController()  {
+    func nextViewController() {
         DispatchQueue.main.async(execute: { () -> Void in
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selfigramTabBar")
+            let viewController:UITabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "selfigramTabBar") as! UITabBarController
             self.present(viewController, animated: true, completion: nil)
         })
         
     }
     
-    func displayMyAlertMessage(userMsg: String)
+    func displayMyAlertMessage(title: String, userMsg: String)
     {
-        let MyAlert = UIAlertController(title:"Alert", message:userMsg, preferredStyle: UIAlertControllerStyle.alert);
+        let MyAlert = UIAlertController(title: title, message:userMsg, preferredStyle: UIAlertControllerStyle.alert);
         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil);
         
         MyAlert.addAction(okAction)

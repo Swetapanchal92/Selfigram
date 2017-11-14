@@ -26,7 +26,7 @@ class RegisterViewController: UIViewController {
         let reEnterPassword = reenterPwdTextField.text
         
         if(userEmail!.isEmpty || userPassword!.isEmpty || reEnterPassword!.isEmpty){
-            displayMyAlertMessage(userMsg: "All fields are required.....!!!")
+            displayMyAlertMessage(title: "Alert", userMsg: "All fields are required.....!!!")
             return;
         }
             else{
@@ -41,23 +41,24 @@ class RegisterViewController: UIViewController {
                 // Stop the spinner
                
                 if ((error) != nil) {
-                    let alert = UIAlertView(title: "Error", message: "\(String(describing: error))", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
-                    
-                } else {
-                    let alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
-                   
-                       // self.present(alert, animated: true, completion: nil)
-                    
+                     self.displayMyAlertMessage(title: "Alert", userMsg: "User Already Exist")
+                    return
                 }
+                //else {
+                    
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
+                        self.present(viewController, animated: true, completion: nil)
+                    })
+                    
+                //}
             })
                 
             }
         
         
         if(userPassword != reEnterPassword){
-            displayMyAlertMessage(userMsg: "Passwords do not match")
+            displayMyAlertMessage(title:"Alert",userMsg: "Passwords do not match")
             return;
         }
         
@@ -68,9 +69,9 @@ class RegisterViewController: UIViewController {
         
     }
     
-    func displayMyAlertMessage(userMsg: String)
+    func displayMyAlertMessage(title: String ,userMsg: String)
     {
-        let MyAlert = UIAlertController(title:"Alert", message:userMsg, preferredStyle: UIAlertControllerStyle.alert);
+        let MyAlert = UIAlertController(title:title, message:userMsg, preferredStyle: UIAlertControllerStyle.alert);
         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil);
         
         MyAlert.addAction(okAction)
