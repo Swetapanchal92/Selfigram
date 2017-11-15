@@ -24,11 +24,10 @@
 		94DBDB611F745A29006BA411 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBDB601F745A29006BA411 /* RegisterViewController.swift */; };
 		94DBDB631F7AF4B3006BA411 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DBDB621F7AF4B3006BA411 /* LoginViewController.swift */; };
 		94E545F61F684FF7007B17AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E545F51F684FF7007B17AD /* AppDelegate.swift */; };
-		94E545FD1F684FF7007B17AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E545FC1F684FF7007B17AD /* Assets.xcassets */; };
-		94E546001F684FF7007B17AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E545FE1F684FF7007B17AD /* LaunchScreen.storyboard */; };
 		94E5460B1F684FF8007B17AD /* selfigramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E5460A1F684FF8007B17AD /* selfigramTests.swift */; };
 		94E546161F684FF8007B17AD /* selfigramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E546151F684FF8007B17AD /* selfigramUITests.swift */; };
-		94E546261F6850E5007B17AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E546251F6850E5007B17AD /* Main.storyboard */; };
+		94E71E811FBCDE6D008E42A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E546251F6850E5007B17AD /* Main.storyboard */; };
+		94E71E821FBCDE74008E42A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E545FC1F684FF7007B17AD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,7 +286,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -332,9 +331,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E546001F684FF7007B17AD /* LaunchScreen.storyboard in Resources */,
-				94E545FD1F684FF7007B17AD /* Assets.xcassets in Resources */,
-				94E546261F6850E5007B17AD /* Main.storyboard in Resources */,
+				94E71E821FBCDE74008E42A9 /* Assets.xcassets in Resources */,
+				94E71E811FBCDE6D008E42A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +355,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		57795D15CD46C314C605DAC6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -453,7 +451,7 @@
 		};
 		D1644AE9E8745FD4B2544D2F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -616,12 +614,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -666,10 +665,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -679,17 +679,20 @@
 			baseConfigurationReference = 17AF289AF4FFFBF2DBE62AC9 /* Pods-selfigram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = selfigram/selfigram.entitlements;
 				DEVELOPMENT_TEAM = 3B55UZ3KB4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = selfigram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swetapanchal.selfigram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -698,17 +701,20 @@
 			baseConfigurationReference = FA8B7CF16F1A41C2B3ECC89B /* Pods-selfigram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = selfigram/selfigram.entitlements;
 				DEVELOPMENT_TEAM = 3B55UZ3KB4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = selfigram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swetapanchal.selfigram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

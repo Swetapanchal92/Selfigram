@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		002D69C3C91FEB6E25236E2577DA5762 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE91DA79B624411560B5B2457C882E07 /* Bolts.framework */; };
 		006D2E8F8EFEC879CEA1DDFC1B5F06D2 /* PFCachedQueryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECCA719559C3E0A413C16B84BB71228 /* PFCachedQueryController.m */; };
 		00841C36D4498A9B7A8C51997892D371 /* PFObjectFileCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 645970074756F5D49C5F1F93FA220A64 /* PFObjectFileCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		00B6EB8BDF7C994F2B10F4C70400F25F /* PFObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C234A84F97F1A8865085B2D6B54A1FE /* PFObjectController.m */; };
@@ -251,6 +250,7 @@
 		90D359F1663C1E414C056A6C37AAB75B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB44A9026C56B92862C77D4D7E30642 /* CoreLocation.framework */; };
 		91293257DC98868520ADB17F52CB78EE /* PFQueryState_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C664A19B42ED334BB7C2D0E56B1E6BB2 /* PFQueryState_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		92D1D754EF28E9A1B922E106C33E743A /* PFSQLiteDatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4FE893B06BB2DB354FAEC3DFF06AB7 /* PFSQLiteDatabaseController.m */; };
+		948C61941FBBB866005636C3 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 948C61931FBBB866005636C3 /* Bolts.framework */; };
 		94BA94AAC3AA21408247BBE7645FD240 /* PFRESTPushCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = DA813AEA6940BDB160E1AFB479362450 /* PFRESTPushCommand.m */; };
 		952204694D8999FE5D45934A4916B049 /* PFPaymentTransactionObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB9DA3DA366320AAD85974A315B428A /* PFPaymentTransactionObserver.m */; };
 		954A68BC699A8F5928C041272764CA97 /* PFDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F44E2758748F5BF00500EED0E8CC811E /* PFDecoder.m */; };
@@ -722,6 +722,7 @@
 		92678026E8F3D25CA6FEF25A3A885383 /* PFMutableACLState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMutableACLState.m; path = Parse/Internal/ACL/State/PFMutableACLState.m; sourceTree = "<group>"; };
 		9306ED78C90AD95DBD6D766384F7C019 /* PFCommandRunningConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCommandRunningConstants.h; path = Parse/Internal/Commands/CommandRunner/PFCommandRunningConstants.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		948C61931FBBB866005636C3 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../Users/Nitin/Library/Developer/Xcode/DerivedData/selfigram-caxmgblpprushcexbqctgosjishi/Build/Products/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
 		952ECC36A85AFC828671B7FBA88D9704 /* Pods-selfigramUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-selfigramUITests.modulemap"; sourceTree = "<group>"; };
 		959D025B08E8B1822434B9085F2B1A24 /* PFMultiProcessFileLockController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFMultiProcessFileLockController.m; path = Parse/Internal/MultiProcessLock/PFMultiProcessFileLockController.m; sourceTree = "<group>"; };
 		962709BF8A1C5BF249E11D55718BC9F6 /* PFRESTUserCommand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRESTUserCommand.h; path = Parse/Internal/Commands/PFRESTUserCommand.h; sourceTree = "<group>"; };
@@ -851,7 +852,6 @@
 		DCBC789ADBE996B6B4A8986CF62734E0 /* PFObjectSubclassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFObjectSubclassInfo.m; path = Parse/Internal/Object/Subclassing/PFObjectSubclassInfo.m; sourceTree = "<group>"; };
 		DD4FE893B06BB2DB354FAEC3DFF06AB7 /* PFSQLiteDatabaseController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSQLiteDatabaseController.m; path = Parse/Internal/LocalDataStore/SQLite/PFSQLiteDatabaseController.m; sourceTree = "<group>"; };
 		DE23B46861ACE7E990D42ABBE8E10D02 /* PFUserAuthenticationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserAuthenticationController.m; path = Parse/Internal/User/AuthenticationProviders/Controller/PFUserAuthenticationController.m; sourceTree = "<group>"; };
-		DE91DA79B624411560B5B2457C882E07 /* Bolts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bolts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE5523D4753A763586CE965E2208594 /* Pods-selfigramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-selfigramUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DEF54379A8A721A928E7F88D429228C2 /* Bolts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Bolts-dummy.m"; sourceTree = "<group>"; };
 		DF951C37725247ACA269CAF0181EE85C /* PFFileState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFFileState.m; path = Parse/Internal/File/State/PFFileState.m; sourceTree = "<group>"; };
@@ -910,7 +910,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B89307913C8DDE56BA25FB8E9C16EE92 /* AudioToolbox.framework in Frameworks */,
-				002D69C3C91FEB6E25236E2577DA5762 /* Bolts.framework in Frameworks */,
 				F6289C6585896BA20D00A833FBBF4DB9 /* CFNetwork.framework in Frameworks */,
 				6B98899BF8FEA2925F82BB583A119703 /* CoreGraphics.framework in Frameworks */,
 				90D359F1663C1E414C056A6C37AAB75B /* CoreLocation.framework in Frameworks */,
@@ -951,6 +950,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B85AAD471DA55AAC6BD017A4E3D083BA /* Foundation.framework in Frameworks */,
+				948C61941FBBB866005636C3 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1416,7 +1416,7 @@
 		44E5CA6134C04B093AD8C39BAB4EFD8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE91DA79B624411560B5B2457C882E07 /* Bolts.framework */,
+				948C61931FBBB866005636C3 /* Bolts.framework */,
 				1540494D4F49219B36E844EE099B29F3 /* iOS */,
 			);
 			name = Frameworks;

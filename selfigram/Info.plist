@@ -3,7 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>NSAppTransportSecurity</key>
-	<dict/>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict/>
+		<key>domain.com</key>
+		<dict>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+			<key>NSExceptionAllowsInsecureHTTPLoads</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>

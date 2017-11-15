@@ -45,7 +45,7 @@ class RegisterViewController: UIViewController {
                     return
                 }
                 //else {
-                    
+                
                     DispatchQueue.main.async(execute: { () -> Void in
                         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login")
                         self.present(viewController, animated: true, completion: nil)
